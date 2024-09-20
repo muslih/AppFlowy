@@ -84,6 +84,7 @@
     "failedToLoad": "Ada yang tidak beres! Gagal memuat area kerja. Coba tutup @:appName yang terbuka dan coba lagi.",
     "errorActions": {
       "reportIssue": "Melaporkan isu",
+      "reportIssueOnGithub": "Laporkan masalah melalui Github",
       "reachOut": "Hubungi di Discord"
     }
   },
@@ -100,7 +101,12 @@
     "large": "besar",
     "fontSize": "Ukuran huruf",
     "import": "Impor",
-    "moreOptions": "Lebih banyak pilihan"
+    "moreOptions": "Lebih banyak pilihan",
+    "wordCount": "Jumlah Kata: {}",
+    "charCount": "Jumlah Karakter: {}",
+    "createdAt": "Dibuat pada: {}",
+    "deleteView": "Hapus",
+    "duplicateView": "Duplikat"
   },
   "importPanel": {
     "textAndMarkdown": "Teks & Markdown",
@@ -118,7 +124,8 @@
     "openNewTab": "Buka di tab baru",
     "moveTo": "Pindahkan ke",
     "addToFavorites": "Masukkan ke Favorit",
-    "copyLink": "Copy Link"
+    "copyLink": "Copy Link",
+    "changeIcon": "Ubah icon"
   },
   "blankPageTitle": "Halaman kosong",
   "newPageText": "Halaman baru",
@@ -126,6 +133,30 @@
   "newGridText": "Grid baru",
   "newCalendarText": "Kalendar baru",
   "newBoardText": "Papan baru",
+  "chat": {
+    "inputMessageHint": "Tanya @:appName AI",
+    "unsupportedCloudPrompt": "Fitur ini hanya ada pada saat menggunakan @:appName cloud",
+    "relatedQuestion": "Terkait",
+    "serverUnavailable": "Layanan tidak tersedia untuk sementara. Silakan coba lagi nanti.",
+    "aiServerUnavailable": "🌈 Aduh! 🌈. Seekor unicorn memakan respons kami. Silakan coba lagi!",
+    "clickToRetry": "Klik untuk mencoba lagi",
+    "regenerateAnswer": "Perbaharui",
+    "question1": "Cara menggunakan Kanban untuk mengelola tugas",
+    "question2": "Jelaskan metode GTD",
+    "question3": "Mengapa menggunakan Rust",
+    "question4": "Resep dengan apa yang ada di dapur saya",
+    "aiMistakePrompt": "AI bisa saja membuat kesalahan. Periksa info penting.",
+    "chatWithFilePrompt": "Apakah Anda ingin mengobrol dengan berkas tersebut?",
+    "indexFileSuccess": "Pengindeksan file berhasil",
+    "inputActionNoPages": "Tidak ada hasil halaman",
+    "referenceSource": "{} sumber ditemukan",
+    "referenceSources": "{} sumber ditemukan",
+    "clickToMention": "Klik untuk menyebutkan halaman",
+    "uploadFile": "Unggah PDF, file md atau txt untuk mengobrol",
+    "questionTitle": "Ide",
+    "questionDetail": "Hai {}! Ada yang bisa saya bantu hari ini?",
+    "indexingFile": "Pengindeksan {}"
+  },
   "trash": {
     "text": "Tempat sampah",
     "restoreAll": "Pulihkan Semua",
@@ -149,7 +180,8 @@
       "emptyDescription": "Anda tidak memiliki file yang dihapus",
       "isDeleted": "Telah dihapus",
       "isRestored": "Telah dipulihkan"
-    }
+    },
+    "confirmDeleteTitle": "Apakah Anda yakin ingin menghapus halaman ini secara permanen?"
   },
   "deletePagePrompt": {
     "text": "Halaman ini di tempat sampah",
@@ -203,16 +235,41 @@
     "dragRow": "Tekan lama untuk menyusun ulang baris",
     "viewDataBase": "Lihat basis data",
     "referencePage": "{nama} ini direferensikan",
-    "addBlockBelow": "Tambahkan blok di bawah ini"
+    "addBlockBelow": "Tambahkan blok di bawah ini",
+    "aiGenerate": "Buat"
   },
   "sideBar": {
     "closeSidebar": "Close sidebar",
     "openSidebar": "Open sidebar",
     "personal": "Pribadi",
+    "private": "Pribadi",
+    "workspace": "Ruang kerja",
     "favorites": "Favorit",
+    "clickToHidePrivate": "Klik untuk menyembunyikan ruang pribadi\nHalaman yang Anda buat di sini hanya dapat dilihat oleh Anda",
+    "clickToHideWorkspace": "Klik untuk menyembunyikan ruang kerja\nHalaman yang Anda buat di sini dapat dilihat oleh semua anggota",
     "clickToHidePersonal": "Klik untuk menutup seksi pribadi",
     "clickToHideFavorites": "Klik untuk menutup seksi favorit",
-    "addAPage": "Tambah sebuah page"
+    "addAPage": "Tambah sebuah page",
+    "addAPageToPrivate": "Tambahkan halaman ke ruang pribadi",
+    "addAPageToWorkspace": "Tambahkan halaman ke ruang kerja",
+    "recent": "Terkini",
+    "today": "Hari ini",
+    "thisWeek": "Minggu ini",
+    "others": "Favorit sebelumnya",
+    "justNow": "baru saja",
+    "minutesAgo": "{count} menit yang lalu",
+    "lastViewed": "Terakhir dilihat",
+    "favoriteAt": "Difavoritkan",
+    "emptyRecent": "Tidak Ada Halaman Terbaru",
+    "emptyRecentDescription": "Saat Anda menampilkan halaman, halaman tersebut akan muncul di sini agar mudah diambil.",
+    "emptyFavorite": "Tidak Ada Halaman Favorit",
+    "favoriteSpace": "Favorit",
+    "RecentSpace": "Terkini",
+    "Spaces": "Ruang",
+    "upgradeToPro": "Tingkatkan ke Pro",
+    "upgradeToAIMax": "Buka AI tanpa batas",
+    "storageLimitDialogTitle": "Anda telah kehabisan ruang penyimpanan gratis. Tingkatkan untuk membuka ruang penyimpanan tak terbatas",
+    "storageLimitDialogTitleIOS": "Anda telah kehabisan kuota penyimpanan gratis."
   },
   "notifications": {
     "export": {
@@ -249,9 +306,32 @@
     "update": "Perbarui",
     "share": "Bagikan",
     "removeFromFavorites": "Hapus dari favorit",
+    "removeFromRecent": "Hapus dari Terbaru",
     "addToFavorites": "Tambahkan ke Favorit",
+    "duplicateSuccessfully": "Berhasil digandakan",
     "rename": "Ganti nama",
-    "helpCenter": "Pusat Bantuan"
+    "helpCenter": "Pusat Bantuan",
+    "add": "Menambahkan",
+    "yes": "Ya",
+    "no": "Tidak",
+    "remove": "Hapus",
+    "dontRemove": "Jangan hapus",
+    "copyLink": "Salin Tautan",
+    "login": "Login",
+    "logout": "Keluar",
+    "deleteAccount": "Hapus akun",
+    "back": "Kembali",
+    "signInGoogle": "Lanjutkan dengan Google",
+    "signInGithub": "Lanjutkan dengan GitHub",
+    "signInDiscord": "Lanjutkan dengan Discord",
+    "more": "Lagi",
+    "create": "Buat",
+    "close": "Tutup",
+    "next": "Berikutnya",
+    "previous": "Sebelumnya",
+    "submit": "Kirim",
+    "download": "Unduh",
+    "backToHome": "Kembali ke Beranda"
   },
   "label": {
     "welcome": "Selamat datang!",
@@ -275,6 +355,57 @@
   },
   "settings": {
     "title": "Pengaturan",
+    "popupMenuItem": {
+      "settings": "Pengaturan",
+      "members": "Anggota",
+      "trash": "=",
+      "helpAndSupport": "Bantuan & Dukungan"
+    },
+    "accountPage": {
+      "menuLabel": "Akun saya",
+      "title": "Akun saya",
+      "general": {
+        "title": "Nama akun & gambar profil",
+        "changeProfilePicture": "Ubah gambar profil"
+      },
+      "email": {
+        "title": "E-mail",
+        "actions": {
+          "change": "Ubah email"
+        }
+      },
+      "login": {
+        "title": "Masuk akun",
+        "loginLabel": "Masuk",
+        "logoutLabel": "Keluar"
+      }
+    },
+    "workspacePage": {
+      "menuLabel": "Ruang kerja",
+      "title": "Ruang kerja",
+      "description": "Sesuaikan tampilan ruang kerja, tema, font, tata letak teks, format tanggal/waktu, dan bahasa Anda.",
+      "appearance": {
+        "options": {
+          "system": "Mobil",
+          "light": "Cerah",
+          "dark": "Gelap"
+        }
+      },
+      "theme": {
+        "title": "Tema"
+      },
+      "dateTime": {
+        "dateFormat": {
+          "dmy": "H/B/T"
+        }
+      },
+      "language": {
+        "title": "Bahasa"
+      },
+      "deleteWorkspacePrompt": {
+        "title": "Hapus ruang kerja"
+      }
+    },
     "menu": {
       "appearance": "Tampilan",
       "language": "Bahasa",
@@ -817,6 +948,7 @@
   },
   "search": {
     "label": "Mencari",
+    "sidebarSearchIcon": "Cari dan lompat dengan cepat ke suatu halaman",
     "placeholder": {
       "actions": "Tindakan penelusuran..."
     }
@@ -1044,5 +1176,34 @@
   "favorite": {
     "noFavorite": "Tidak ada halaman favorit",
     "noFavoriteHintText": "Geser halaman ke kiri untuk menambahkannya ke favorit Anda"
+  },
+  "newSettings": {
+    "myAccount": {
+      "title": "Akun saya",
+      "profileLabel": "Nama akun & Gambar profil",
+      "profileNamePlaceholder": "Masukkan nama Anda",
+      "accountSecurity": "Keamanan akun",
+      "2FA": "Otentikasi 2 Langkah",
+      "aiKeys": "Kunci AI",
+      "accountLogin": "Login Akun",
+      "updateNameError": "Gagal memperbarui nama",
+      "updateIconError": "Gagal memperbarui ikon",
+      "deleteAccount": {
+        "title": "Hapus Akun",
+        "subtitle": "Hapus akun Anda dan semua data Anda secara permanen.",
+        "description": "Hapus akun Anda secara permanen dan hapus akses dari semua ruang kerja.",
+        "deleteMyAccount": "Hapus akun saya",
+        "dialogTitle": "Hapus akun",
+        "dialogContent1": "Apakah Anda yakin ingin menghapus akun Anda secara permanen?",
+        "dialogContent2": "Tindakan ini tidak dapat dibatalkan, dan akan menghapus akses dari semua ruang kerja, menghapus seluruh akun Anda, termasuk ruang kerja pribadi, dan menghapus Anda dari semua ruang kerja bersama.",
+        "confirmHint1": "Silakan ketik \"HAPUS AKUN SAYA\" untuk konfirmasi.",
+        "confirmHint2": "Saya memahami bahwa tindakan ini tidak dapat dibatalkan dan akan menghapus akun saya dan semua data terkait secara permanen.",
+        "confirmHint3": "HAPUS AKUN SAYA",
+        "checkToConfirmError": "Anda harus mencentang kotak untuk mengonfirmasi penghapusan",
+        "failedToGetCurrentUser": "Gagal mendapatkan email pengguna saat ini",
+        "confirmTextValidationFailed": "Teks konfirmasi Anda tidak cocok dengan \"HAPUS AKUN SAYA\"",
+        "deleteAccountSuccess": "Akun berhasil dihapus"
+      }
+    }
   }
 }
